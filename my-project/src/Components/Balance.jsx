@@ -1,7 +1,7 @@
 import React from "react";
 
-const Balance = ({ transaction }) => {
-  const amounts = transaction.map((item) => item.amount);
+const Balance = ({ transactions }) => {
+  const amounts = transactions.map((item) => item.amount);
   console.log("amounts :", amounts);
 
   const total = amounts.reduce((acc, item) => (acc += item), 0);

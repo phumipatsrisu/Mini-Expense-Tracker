@@ -16,7 +16,7 @@ const App = () => {
   };
   return (
     <div>
-      <Balance transaction={transactions} />
+      <Balance transactions={transactions} />
       <h2>บันทึกรายจ่าย</h2>
       <TransactionList transactions={transactions} />
       <TranscationForm addTransaction={addTransaction} />
