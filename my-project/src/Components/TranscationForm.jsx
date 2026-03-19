@@ -15,7 +15,6 @@ const TranscationForm = ({ addTransaction }) => {
     setText("");
     setAmount(0);
   };
-  console.log(text);
 
   return (
     <div>

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import TranscationForm from "./Components/TranscationForm";
 import TransactionList from "./Components/TransactionList";
+import Balance from "./Components/Balance";
 
 const App = () => {
   const [transactions, setTransactions] = useState([]);
@@ -15,6 +16,7 @@ const App = () => {
   };
   return (
     <div>
+      <Balance transaction={transactions} />
       <h2>บันทึกรายจ่าย</h2>
       <TransactionList transactions={transactions} />
       <TranscationForm addTransaction={addTransaction} />

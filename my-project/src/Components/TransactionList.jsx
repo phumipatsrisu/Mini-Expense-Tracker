@@ -1,7 +1,6 @@
 import React from "react";
 
 const TransactionList = ({ transactions }) => {
-  console.log(transactions);
 
   return (
     <div>
