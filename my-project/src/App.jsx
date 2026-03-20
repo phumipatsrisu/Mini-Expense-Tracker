@@ -14,11 +14,18 @@ const App = () => {
     };
     setTransactions([newTransaction, ...transactions]);
   };
+
+  const deleteTransaction = (id) => {
+    setTransactions(transactions.filter((item) => item.id !== id));
+  };
   return (
     <div>
       <Balance transactions={transactions} />
       <h2>บันทึกรายจ่าย</h2>
-      <TransactionList transactions={transactions} />
+      <TransactionList
+        transactions={transactions}
+        deleteTransaction={deleteTransaction}
+      />
       <TranscationForm addTransaction={addTransaction} />
     </div>
   );

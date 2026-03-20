@@ -1,7 +1,6 @@
 import React from "react";
 
-const TransactionList = ({ transactions }) => {
-
+const TransactionList = ({ transactions, deleteTransaction }) => {
   return (
     <div>
       <h3>ประวัติรายการ</h3>
@@ -14,6 +13,7 @@ const TransactionList = ({ transactions }) => {
         {transactions.map((item) => (
           <li key={item.id}>
             {item.text} {item.amount}
+            <button onClick={() => deleteTransaction(item.id)}>Delete</button>
           </li>
         ))}
       </ul>
